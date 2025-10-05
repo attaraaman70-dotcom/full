@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow — Portfolio & Showcase</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Shadow</h1>
+      <p>Precision. Performance. Passion.</p>
+      <a href="#portfolio" class="btn">View Work</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="fade-in">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      <strong>Shadow</strong> is a creative portfolio blending speed, design, and innovation.
+      Inspired by futuristic aesthetics and the power of motion, this site represents a balance
+      between art and technology — built for creators who move fast and think bold.
+    </p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="fade-in">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="project">
+        <img src="https://placehold.co/600x400/0ff/000?text=Design+Concept" alt="Project 1">
+        <div class="overlay">
+          <h3>Neon Design</h3>
+          <p>Conceptual design inspired by futuristic neon aesthetics.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://placehold.co/600x400/b026ff/fff?text=Interface+System" alt="Project 2">
+        <div class="overlay">
+          <h3>Interface System</h3>
+          <p>UI/UX concept with dynamic lighting and motion visuals.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://placehold.co/600x400/111/fff?text=Digital+Showcase" alt="Project 3">
+        <div class="overlay">
+          <h3>Digital Showcase</h3>
+          <p>A high-speed portfolio platform for modern creators.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in">
+    <h2 class="section-title">Contact</h2>
+    <p>Let's create something extraordinary together.</p>
+    <div class="socials">
+      <a href="mailto:shadow@example.com">Email</a>
+      <a href="https://github.com/attaraaman70-dotcom" target="_blank">GitHub</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Shadow — Designed with precision & passion.
+  </footer>
+
+  <script>
+    // Smooth fade-in scroll effect
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    fadeEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
